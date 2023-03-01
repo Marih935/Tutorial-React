@@ -1,19 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'; //"coração do react"
+import ReactDOM from 'react-dom/client'; //web
 import './index.css';
 
 class Square extends React.Component {
-    render() {
+    render() { //desenha componente
       return (
-        <button className="square">
+        <button className="square"> 
           {/* TODO */}
-        </button>
+        </button> //importa css
       );
     }
   }
   
   class Board extends React.Component {
-    renderSquare(i) {
+    renderSquare(i) { //desenha um quadrado
       return <Square />;
     }
   
@@ -23,8 +23,8 @@ class Square extends React.Component {
       return (
         <div>
           <div className="status">{status}</div>
-          <div className="board-row">
-            {this.renderSquare(0)}
+          <div className="board-row"> 
+            {this.renderSquare(0)} 
             {this.renderSquare(1)}
             {this.renderSquare(2)}
           </div>
@@ -46,11 +46,11 @@ class Square extends React.Component {
   class Game extends React.Component {
     render() {
       return (
-        <div className="game">
-          <div className="game-board">
+        <div className="game"> {/* orgnaiza os componentes */}
+          <div className="game-board"> {/* organiza o tabuleiro */}
             <Board />
           </div>
-          <div className="game-info">
+          <div className="game-info"> {/* organiza informações */}
             <div>{/* status */}</div>
             <ol>{/* TODO */}</ol>
           </div>
